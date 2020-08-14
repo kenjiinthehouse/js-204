@@ -65,7 +65,7 @@ const createCard = (flower, point) => {
   }
 }
 
-// 產生52張牌
+// 產生52張牌用
 const initCards = () => {
   const cards = []
   const flowers = ['h', 'd', 's', 'c']
@@ -80,6 +80,7 @@ const initCards = () => {
   return cards
 }
 
+// 洗牌用
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -88,18 +89,15 @@ function shuffle(a) {
   return a
 }
 
+// 呈現卡牌用
 const displayCard = (card) => {
   document.getElementById('cards').appendChild(card.toString())
 }
 
-// flower: h, d, s, c
-//const card = createCard('h', 13)
-//document.getElementById('cards').appendChild(card.toString())
-
 // 全域的牌-陣列
-let cards = shuffle(initCards())
-let index = 0
-let total = 0
+let cards = shuffle(initCards()) //目前所有卡牌
+let index = 0 //抽到第幾張(從0開始計算索引值)
+let total = 0 //目前點數
 
 document.getElementById('dispatch').addEventListener('click', () => {
   // 顯示卡片
