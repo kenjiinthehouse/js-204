@@ -3,8 +3,10 @@ let selectedUserid = 0
 
 const showSpinner = (isLoading = false) => {
   if (isLoading) {
+    // 每次載入前先清除目前的列表
     document.getElementById('data-list').innerHTML = ''
 
+    //呈現載入指示圖
     document.getElementById('spinner').innerHTML = `
         <div class="spinner-border text-danger" role="status">
           <span class="sr-only">Loading...</span>
@@ -15,6 +17,7 @@ const showSpinner = (isLoading = false) => {
 }
 
 const getUserDataFromServer = (name) => {
+  // 開始載入資料，呈現載入指示圖
   showSpinner(true)
 
   // 連接伺服器，同一台電腦上
@@ -47,6 +50,7 @@ const getUserDataFromServer = (name) => {
     .then((data) => {
       console.log(data)
 
+      // 1500微秒後關起載入的指示圖，然後呈現資料
       setTimeout(() => {
         showSpinner(false)
 
