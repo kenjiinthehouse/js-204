@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+    </div>
+
+    <button onclick="addBox()">add</button>
+
+    <script>
+      let box = document.getElementsByClassName("box");
+      let box2 = document.querySelector("#wrap");
+      console.log("box", box);
+      console.log("box2", box2);
+
+      function addBox() {
+        document.getElementById("wrap").innerHTML +=
+          '<div class="box">box3</div>';
+        console.log("box", box);
+        console.log("box2", box2);
+      }
+      //   box[0].innerHTML = "123";
+    </script>
+  </body>
+</html>
