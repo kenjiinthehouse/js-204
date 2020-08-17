@@ -17,8 +17,28 @@ const displayTodoList = () => {
   // }
   // todoList.innerHTML = '<ul>' + display + '</ul>'
 
+  todos = ['1','2','3'];
   // 與上述的程式碼執行一模一樣，連鎖語法加上join(合併陣列)
   todoList.innerHTML = `<ul>${todos.map((v) => `<li>${v}</li>`).join('')}</ul>`
+
+
+  todos.map(function (v,index){
+    return `<li>${v}</li>`
+  }) 
+
+  `<li> ${v} </li>`  
+
+  let x = todos.map((v) => `<li>${v}</li>`)
+
+  todos.forEach((v) => `<li>${v}</li>`)
+
+  x = [`<li>1</li>`,`<li>2</li>`,`<li>3</li>`]
+
+
+  x.join('')
+
+  `<ul><li>1</li><li>2</li><li>3</li></ul>`
+
 }
 
 todoAdd.addEventListener('click', () => {
