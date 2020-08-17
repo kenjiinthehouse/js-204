@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "text": "買牛奶",
+        "completed": false,
+        "edited": false
+    },
+    {
+        "id": 2,
+        "text": "買ps5",
+        "completed": true,
+        "edited": false
+    },
+    {
+        "id": 8,
+        "text": "買東西",
+        "completed": true,
+        "edited": false
+    },
+    {
+        "id": 3,
+        "text": "學js",
+        "completed": true,
+        "edited": false
+    },
+    {
+        "id": 4,
+        "text": "學html5",
+        "completed": true,
+        "edited": false
+    }
+]
