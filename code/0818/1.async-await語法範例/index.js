@@ -1,18 +1,14 @@
 const getDataFromServer = async () => {
   try {
     // 連接伺服器，同一台電腦上，得到回應值
-    const response = await fetch('http://127.0.0.1:5500/public/data.json', {
-      method: 'GET',
-    })
+    const response = await fetch('http://127.0.0.1:5500/public/data.json')
 
     // 由response物件，剖析出json資料
     const data = await response.json()
 
     // 得到data資料，顯示在網頁上
     document.getElementById('data-list').innerHTML = data
-      .map((v) => {
-        return `<li>${v.text}</li>`
-      })
+      .map((v) => `<li>${v.text}</li>`)
       .join('')
   } catch (error) {
     console.log(error)
